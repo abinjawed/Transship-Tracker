@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zone A1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+      <link rel="stylesheet" href="assets/css/formstyles.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <a href='welcome.html'>Back to Main Page</a>
+    <a href='dataA1.html'>Records</a>
+  </div>
+
+<div class="box">
+<form action="insertA1.php" method="POST">
+  <table>
+  <h1>Zone A1</h1>
+  <tr>
+    <td>Today's Date :</td>
+    <td><input type="date" id="startdateId" value="" name="todaysdate" required></td>
+   </tr>
+  <tr>
+    <td>Transaction</td>
+    <td>
+      <div id="plusoneorminusone">
+    <input type="radio" name="plusorminus" id="plusone" value="1" required>+1<br>
+    <input type="radio" name="plusorminus" id="minusone" value="-1" required>-1<br>
+      </div>
+    </td>
+ </tr>
+ <tr>
+    <td>Container ID :</td>
+    <td><input type="text" autofocus onfocus="this.value=''" name="containerid" required></td>
+</tr>
+
+<!--<tr>
+    <td><input type="submit" value="Submit"></td>
+</tr>-->
+
+  </table>
+ </form>
+
+   <!--Main JS Script-->
+   <script src="assets/js/zoneA1.js"></script>
+
+  </div>
+</body>
+</html>

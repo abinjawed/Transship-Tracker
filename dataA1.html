@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zone A1 Pallets</title>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="assets/css/datastyles.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <a href='zoneA1.html'>Back to the Form</a>
+  </div>
+
+  <div class="container">
+    <div class="row" style="margin-top: 50px">
+      <div class="col-md-6 col-md-offset-3">
+		<p class="center"> Number items per pages:
+			<select name="recordsPerPage" id="recordsPerPage" onChange="loadData();">
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="50">50</option>
+			</select>
+			<p id="pages" class="center">Pages: <a href="#" OnClick="changePage(-1);">previous</a> <a href="#" OnClick="changePage(1);">next</a></p>
+		</p>
+
+
+        <table>
+          <thead>
+			<tr>
+				<th>Record #<a id="td_id" href="#" OnClick="changeOrder('id',-1);">&#8599;</a></th>
+				<th>Date<a href="#" id="td_todaysdate" OnClick="changeOrder('todaysdate',1);">&#8600;</a></th>
+				<th>Container ID <a href="#" id="td_containerid" OnClick="changeOrder('containerid',1);">&#8600;</a></th>
+				<th>Transaction <a id="td_plusorminus" href="#" OnClick="changeOrder('plusorminus',1);">&#8600;</a></th>
+			</tr>
+			<tr>
+				<th><input type="text" id="id"/></th>
+                <th><input type="text" id="todaysdate"/></th>
+				<th><input type="text" id="containerid"/></th>
+				<th><input type="text" id="plusorminus"/></th>
+			</tr>
+          </thead>
+		  <tbody class="tbody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <button>Export to CSV</button>
+
+  <!--Main JS Script-->
+  <script src="assets/js/dataA1.js"></script>
+
+</body>
+</html>
